@@ -232,18 +232,37 @@
 		&.major {
 			margin: 0 0 (_size(element-margin) * 1.75) 0;
 
-			h2, h3, h4, h5, h6 {
-				border-bottom: solid 2px _palette(border);
-				display: inline-block;
-				padding-bottom: 1em;
-				position: relative;
+      h2 {
+        @include vendor('transform', 'scale(1)');
+        @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
+        display: inline-block;
+        font-size: 1.75em;
+        opacity: 1;
+        padding: 0.35em 1em;
+        position: relative;
+        z-index: 1;
 
-				&:after {
-					content: '';
-					display: block;
-					height: 1px;
-				}
-			}
+        &:before, &:after {
+          @include vendor('transition', 'width 0.85s ease');
+          @include vendor('transition-delay', '0.25s');
+          background: _palette(fg-bold);
+          content: '';
+          display: block;
+          height: 2px;
+          position: absolute;
+          width: 100%;
+        }
+
+        &:before {
+          top: 0;
+          left: 0;
+        }
+
+        &:after {
+          bottom: 0;
+          right: 0;
+        }
+      }
 
 			p {
 				color: _palette(fg);
@@ -811,6 +830,7 @@
 
 		&:hover {
 			background-color: _palette(border-bg);
+      color: _palette(touch);
 		}
 
 		&:active {
@@ -881,7 +901,7 @@
 			width: 50%;
 
 			@for $i from 1 through _misc(max-features) {
-				$j: 0.035 * $i;
+				$j: 0.05 * $i;
 
 				&:nth-child(#{$i}) {
 					background-color: rgba(0,0,0, $j);
@@ -890,7 +910,7 @@
 
 			&:before {
 				display: block;
-				color: _palette(accent2, bg);
+				color: _palette(touch);
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
