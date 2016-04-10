@@ -20,7 +20,6 @@
     "gulp-sass": "^2.0.0",
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.0",
-    "gulp-useref": "^3.0.0",
-    "wiredep": "^2.2.2"
+    "gulp-useref": "^3.0.0"
   }
 }
