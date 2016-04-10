@@ -481,18 +481,6 @@
 				font-size: 1em;
 			}
 		}
-
-		&.style1 {
-			color: _palette(accent2, bg);
-		}
-
-		&.style2 {
-			color: _palette(accent3, bg);
-		}
-
-		&.style3 {
-			color: _palette(accent4, bg);
-		}
 	}
 
 /* Image */
@@ -1725,7 +1713,7 @@
 
 	#footer {
 		@include padding(6em, 0);
-		background-color: darken(_palette(bg), 8);
+		background-color: _palette(bg-dark);
 		text-align: center;
 
 		.icons {
