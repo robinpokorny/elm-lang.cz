@@ -166,7 +166,7 @@
 	}
 
 	code {
-		background: _palette(border-bg);
+		background: rgba(_palette(fg), 0.15);
 		border-radius: 3px;
 		font-family: _font(family-fixed);
 		font-size: 0.9em;
