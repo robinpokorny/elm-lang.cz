@@ -88,7 +88,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
+		color: _palette(fg);
 		font-weight: _font(weight-extrabold);
 		letter-spacing: _size(letter-spacing-alt);
 		line-height: 1em;
@@ -159,7 +159,7 @@
 	}
 
 	blockquote {
-		border-left: solid 4px _palette(border);
+		border-left: solid 4px _palette(border-bg);
 		font-style: italic;
 		margin: 0 0 _size(element-margin) 0;
 		padding: 0.5em 0 0.5em 2em;
@@ -245,7 +245,7 @@
         &:before, &:after {
           @include vendor('transition', 'width 0.85s ease');
           @include vendor('transition-delay', '0.25s');
-          background: _palette(fg-bold);
+          background: _palette(fg);
           content: '';
           display: block;
           height: 2px;
@@ -267,6 +267,10 @@
 			p {
 				color: _palette(fg);
 				top: 0;
+			}
+
+			strong {
+				color: _palette(fg);
 			}
 
 			@include breakpoint(small) {
@@ -573,11 +577,9 @@
 			padding-left: 0;
 
 			li {
-				border-top: solid 1px _palette(border);
 				padding: 0.5em 0;
 
 				&:first-child {
-					border-top: 0;
 					padding-top: 0;
 				}
 			}
@@ -812,7 +814,7 @@
 		border-radius: 3px;
 		border: 0;
 		box-shadow: inset 0 0 0 2px _palette(border);
-		color: _palette(fg-bold);
+		color: _palette(fg);
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -858,16 +860,16 @@
 		}
 
 		&.special {
-			background-color: _palette(accent6, bg);
+			background-color: _palette(touch);
 			box-shadow: none !important;
-			color: _palette(accent6, fg-bold) !important;
+			color: _palette(fg) !important;
 
 			&:hover {
-				background-color: lighten(_palette(accent6, bg), 5) !important;
+				background-color: lighten(_palette(touch), 8) !important;
 			}
 
 			&:active {
-				background-color: darken(_palette(accent6, bg), 5) !important;
+				background-color: darken(_palette(touch), 5) !important;
 			}
 		}
 
@@ -1043,7 +1045,7 @@
 			}
 
 			h2, h3, h4, h5, h6 {
-				color: _palette($p, fg-bold);
+				color: _palette($p, fg);
 			}
 
 			hr {
@@ -1051,7 +1053,7 @@
 			}
 
 			blockquote {
-				border-color: _palette($p, border);
+				border-color: _palette($p, border-bg);
 			}
 
 			code {
@@ -1623,49 +1625,17 @@
 		}
 	}
 
-/* CTA */
+/* LINKS */
 
-	#cta {
+	.links {
+		background: _palette(fg);
+		color: _palette(fg-bold);
+
 		.inner {
-			@include vendor('display', 'flex');
 			max-width: 45em;
 
-			header {
-				@include vendor('order', '1');
-				padding-right: 3em;
-				width: 70%;
-
-				p {
-					color: inherit;
-				}
-			}
-
-			.actions {
-				@include vendor('order', '2');
-				width: 30%;
-			}
-
-			@include breakpoint(medium) {
-				display: block;
-				text-align: center;
-
-				header {
-					padding-right: 0;
-					width: 100%;
-				}
-
-				.actions {
-					margin-left: auto;
-					margin-right: auto;
-					max-width: 20em;
-					width: 100%;
-				}
-			}
-
-			@include breakpoint(small) {
-				.actions {
-					max-width: none;
-				}
+			h2 {
+				color: _palette(fg-bold);
 			}
 		}
 	}
