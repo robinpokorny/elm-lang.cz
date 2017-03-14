@@ -5,9 +5,8 @@
 ### Development
 
 ```sh
-npm install -g gulp-cli
-npm install
-gulp serve
+yarn
+yarn start
 ```
 
 ### Acknowledgment
