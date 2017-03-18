@@ -150,7 +150,7 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px _palette(border);
+		border-bottom: solid 2px _palette(border-bg);
 		margin: (_size(element-margin) * 1.5) 0;
 
 		&.major {
@@ -1049,7 +1049,7 @@
 			}
 
 			hr {
-				border-color: _palette($p, border);
+				border-color: _palette($p, border-bg);
 			}
 
 			blockquote {
