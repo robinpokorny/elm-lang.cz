@@ -9,6 +9,13 @@ yarn
 yarn start
 ```
 
+### Build
+
+```sh
+yarn
+yarn run build
+```
+
 ### Acknowledgment
 
 This project was generated using [generator-webapp](https://github.com/yeoman/generator-webapp).
